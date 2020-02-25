@@ -19,14 +19,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button p=(Button)findViewById(R.id.button3);
-        p.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,top_activity.class);
-                startActivity(intent);
-            }
-        });
+       Button play=(Button)findViewById(R.id.button3);
+       play.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(MainActivity.this,top_activity.class);
+               startActivity(intent);
+           }
+       });
+       Button lis= (Button)findViewById(R.id.button2);
+       lis.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent =new Intent(MainActivity.this,listview.class);
+               startActivity(intent);
+           }
+       });
 
 
 
