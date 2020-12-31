@@ -7,6 +7,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+<!--   app permissions for app to access android features   -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -15,6 +16,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
+<!--   application global properties like label, icon, services, providers, themes, httpRequests, etc    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,10 +33,13 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
+        
+<!--      description for google map api key    -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+<!--      activities with basic properties    -->
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
@@ -46,6 +51,8 @@
         <activity android:name=".End_activity" />
         <activity android:name=".Begin_activity" />
         <activity android:name=".DisplayMessageActivity" />
+        
+<!--      default activity launched by android system    -->
         <activity android:name=".splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,12 +62,15 @@
         </activity>
         <activity android:name=".MainActivity" />
 
+<!--      broadcast receiver registered to get pending intents    -->
         <receiver android:name=".MyBroadcastReceiver" />
 
+<!--       background service for music  -->
         <service
             android:name=".MusicService"
             android:enabled="true" />
 
+<!--       content provider class that provides data to external requests   -->
         <provider
             android:name=".AcProvider"
             android:authorities="com.example.helloworld.AccountProvider" />
