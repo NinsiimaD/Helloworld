@@ -5,9 +5,12 @@
     <item android:title="photos" android:id="@+id/media" />
     <item android:title="music" android:id="@+id/search"/>
     <item android:title="play" android:id="@+id/songplay"/>
-    <item android:title="list" android:id="@+id/books"/>
+    <item android:title="Google Map" android:id="@+id/books"/>
     <item android:title="cfile" android:id="@+id/readc"/>
     <item android:title="emailme" android:id="@+id/email"/>
     <item android:title="callphone" android:id="@+id/call"/>
+    <item android:title="Content provider" android:id="@+id/cp"/>
+    <item android:title="listview, recyclerview" android:id="@+id/listviewandrecycerl"/>
+
 
 </menu>
